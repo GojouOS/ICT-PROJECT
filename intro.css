@@ -1,0 +1,207 @@
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    padding:0px;
+    margin:0px;
+    overflow-y:hidden;
+}
+
+.screen {
+    height:100%;
+    border:5px solid blue;
+}
+
+/* SCREEN 1 */
+
+.screen1 {
+    display:flex;
+    flex-direction:row;
+}
+
+/* .screen1box {
+    border:1px solid red;
+}
+
+.header-container {
+    height:10%;
+}
+
+.screen1-content {
+    height:90%;
+}
+ */
+
+.column {
+    /* border:yellow 1px solid; */
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    gap:10px;
+    align-items:center;
+    overflow-y:hidden;
+}
+
+.boxcol {
+    position:absolute;
+    height:50%;
+    width:10%;
+    position:relative;
+    bottom:110%;
+}
+
+.box1{
+    animation:boxup 5s forwards, rotate 15s ease infinite;
+    background-color:red;
+}
+
+.box2{
+    animation:boxup 5s 0.5s forwards, rotate 15s ease infinite;
+    background-color:orange;
+}
+
+.box3{
+    animation:boxup 5s 0.6s forwards, rotate 15s ease infinite;
+    background-color:yellow;
+}
+
+.box4{
+    animation:boxup 5s 0.7s forwards, rotate 15s ease infinite;
+    background-color:greenyellow;
+}
+
+.box5{
+    animation:boxup 5s 0.8s forwards, rotate 15s ease infinite;
+    background-color:skyblue;
+}
+
+.box6{
+    animation:boxup 5s 0.9s forwards, rotate 15s ease infinite;
+    background-color:blue;
+}
+
+.box7{
+    animation:boxup 5s 1s forwards, rotate 15s ease infinite;
+    background-color:indigo;
+}
+
+.box8{
+    animation:boxup 5s 1.1s forwards, rotate 15s ease infinite;
+    background-color:purple;
+}
+
+.box9{
+    animation:boxup 5s 1.2s forwards, rotate 15s ease infinite;
+    background-color:maroon;
+}
+
+.box10{
+    animation:boxup 5s 1.3s forwards, rotate 15s ease infinite;
+    background-color:pink;
+}
+
+.column {
+    position:relative;
+}
+
+.column::before {
+    content:"";
+    position:absolute;
+    z-index:-1;
+    height:0%;
+    width:100%;
+    bottom:0;
+    right:0;
+}
+
+.column1::before {
+    animation:colorup 1s 2s forwards, common 1s 4s forwards;
+    background:red;
+}
+
+.column2::before {
+    animation:colorup 1s 2.5s forwards, common 1s 4s forwards;
+    background:orange;
+}
+
+.column3::before {
+    animation:colorup 1s 2.6s forwards, common 1s 4s forwards;
+    background:yellow;
+}
+
+.column4::before {
+    animation:colorup 1s 2.7s forwards, common 1s 4s forwards;
+    background:greenyellow;
+}
+
+.column5::before {
+    animation:colorup 1s 2.8s forwards, common 1s 4s forwards;
+    background:skyblue;
+}
+
+.column6::before {
+    animation:colorup 1s 2.9s forwards, common 1s 4s forwards;
+    background:blue;
+}
+
+.column7::before {
+    animation:colorup 1s 3s forwards, common 1s 4s forwards;
+    background:indigo;
+}
+
+.column8::before {
+    animation:colorup 1s 3.1s forwards, common 1s 4s forwards;
+    background:purple;
+}
+
+.column9::before {
+    animation:colorup 1s 3.2s forwards, common 1s 4s forwards;
+    background:maroon;
+}
+
+.column10::before {
+    animation:colorup 1s 3.3s forwards, common 1s 4s forwards;
+    background:pink;
+}
+
+@keyframes colorup {
+    0% {
+
+    }
+
+    100% {
+        height:100%;
+    }
+}
+
+@keyframes common{
+    0% {
+
+    }
+
+    100% {
+        background:black;
+    }
+}
+
+@keyframes boxup {
+    0% {
+
+    }
+
+    to {
+       bottom:-130%; 
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform:rotate(0deg);
+    }
+
+    100% {
+        transform:rotate(1800deg);
+    }
+}
